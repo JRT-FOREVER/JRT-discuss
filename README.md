@@ -1,6 +1,13 @@
 # JRT-discuss
-欢迎大家来讨论，JRT灌水，扯淡，意见专用仓库
+### 欢迎大家来讨论，JRT灌水，扯淡，意见专用仓库
 
 
-## 建议换成这个->_->
-<img src="https://raw.githubusercontent.com/JRT-FOREVER/JRT-discuss/master/jrt_logo.png" alt="JRT_logo">
+---
+>## 好无聊好像被强奸
+
+>#### 为什么呢没人来强奸我
+
+>#### 后面也可以
+> <div align = right>1楼</div>
+
+>---
