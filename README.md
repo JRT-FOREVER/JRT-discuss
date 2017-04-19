@@ -11,7 +11,7 @@
 > <div align = right>1楼</div>
 
 >---
-
+</code>
 <h2>AJAX</h2>
 <button type="button" v-on:click="messageaa">请求数据</button>
 <div id="myDiv"></div>
@@ -73,3 +73,4 @@ function loadXMLDoc()
   //xmlhttp.send();
 }
 </script>
+<code>
