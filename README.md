@@ -13,11 +13,11 @@
 >---
 </code>
 <h2>AJAX</h2>
-<button type="button" v-on:click="messageaa">请求数据</button>
+<button class="btn btn-sm BtnGroup-item" type="button" v-on:click="messageaa">请求数据</button>
 <div id="myDiv"></div>
 
 
-
+<script src="./public/vue.js"></script>
 <script>
 var example2 = new Vue({
 el: '#discuss',
