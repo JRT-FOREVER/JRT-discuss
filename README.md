@@ -9,12 +9,16 @@ JRT-discuss
 >#### 为什么呢没人来强奸我
 >
 >#### 后面也可以
-> <div align = right>1楼</div>
+> <div align = right>1F</div>
 >
 >---
 > ## 据说github是全球最大的基佬交友平台
 >
 >#### 楼下怎么看
-> <div align = right>2楼</div>
+> <div align = right>2F</div>
 >
 >---
+>#### 一个神奇的地址
+> https://jrt-forever.github.io/JRT-discuss/
+> <div align = right>3F</div>
+>
