@@ -8,17 +8,21 @@
 
 <body>
 <div id="discuss">
-  <h2>AJAX</h2>
+  <h2>JRT-discuss论坛</h2>
   <button type="button" v-on:click="messageaa">请求数据</button>
   <div id="myDiv"></div>
-  <div>{{ parentMessage }}</div>
+  <ul id="myDiv">
+    {{ items }}
+    <li v-for="item in items">
+      {{ item.body }}
+    </li>
+  </ul>
 </div>
 
 <script>
 var example2 = new Vue({
   el: '#discuss',
   data: {
-    parentMessage: 'Parentss',
     items: [
       { message: 'Foo' },
       { message: 'Bar' }
@@ -26,24 +30,24 @@ var example2 = new Vue({
   },
 
   methods: {
-  messageaa: function () {
-    //window.alert(5 + 6)
-    xmlhttp=new XMLHttpRequest()
-    xmlhttp.onreadystatechange=function()
-  	{
-  		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-  		{
-        a=JSON.parse(xmlhttp.responseText)
-  			document.getElementById("myDiv").innerHTML=a[0].body
-        alert(a[0].body)
-        this.parentMessage=a[0].body
-  		}
-  	}
-    xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true)
-    //var a=1
-  	xmlhttp.send()
-
-  }}
+    messageaa: function () {
+      xmlhttp=new XMLHttpRequest()
+      xmlhttp.onreadystatechange=function()
+  	   {
+         if (xmlhttp.readyState==4 && xmlhttp.status==200)
+         {
+           example2.items=JSON.parse(xmlhttp.responseText)
+           items=JSON.parse(xmlhttp.responseText)
+           document.getElementById("myDiv").innerHTML=items[0].body
+           alert(items[0].body)
+           this.parentMessage=items[0].body
+         }
+       }
+       xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true)
+       xmlhttp.send()
+       //this.items = xmlhttp.responseText
+     }
+   }
 })
 
 /*
