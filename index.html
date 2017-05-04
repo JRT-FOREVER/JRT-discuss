@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>JRT-discuss论坛</title>
-<script src="./public/vue.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>JRT-discuss论坛</title>
+  <script src="./public/vue.js"></script>
+  <link rel="stylesheet" href="./public/layui/css/layui.css">
+  <script src="./public/layui/layui.js"></script>
+
 </head>
 
 <body>
+  <ul class="layui-nav" lay-filter="">
+    <li class="layui-nav-item layui-this"><a href="">JRT-discuss论坛</a></li>
+  </ul>
+
 <div id="discuss">
-  <h2>JRT-discuss论坛</h2>
-  <button type="button" v-on:click="messageaa">请求数据</button>
   <div id="myDiv"></div>
   <ul id="myDiv">
     <li v-for="(item, index) in items">
@@ -39,10 +45,10 @@ var app = new Vue({
          if (xmlhttp.readyState==4 && xmlhttp.status==200)
          {
            app.items=JSON.parse(xmlhttp.responseText)
-           items=JSON.parse(xmlhttp.responseText)
-           document.getElementById("myDiv").innerHTML=items[0].body
-           alert(items[0].body)
-           this.parentMessage=items[0].body
+           //items=JSON.parse(xmlhttp.responseText)
+           //document.getElementById("myDiv").innerHTML=items[0].body
+           //alert(items[0].body)
+           //this.parentMessage=items[0].body
          }
        }
        xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true)
@@ -51,6 +57,7 @@ var app = new Vue({
      }
    }
 })
+app.messageaa()
 </script>
 </body>
 
