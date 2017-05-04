@@ -22,7 +22,7 @@
 </div>
 
 <script>
-var example2 = new Vue({
+var app = new Vue({
   el: '#discuss',
   data: {
     items: [
@@ -38,7 +38,7 @@ var example2 = new Vue({
   	   {
          if (xmlhttp.readyState==4 && xmlhttp.status==200)
          {
-           example2.items=JSON.parse(xmlhttp.responseText)
+           app.items=JSON.parse(xmlhttp.responseText)
            items=JSON.parse(xmlhttp.responseText)
            document.getElementById("myDiv").innerHTML=items[0].body
            alert(items[0].body)
@@ -51,33 +51,7 @@ var example2 = new Vue({
      }
    }
 })
-
-/*
-  function loadXMLDoc()
-  {
-  	var xmlhttp;
-  	if (window.XMLHttpRequest)
-  	{
-  		// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-  		xmlhttp=new XMLHttpRequest();
-  	}
-  	else
-  	{
-  		// IE6, IE5 浏览器执行代码
-  		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  	}
-  	xmlhttp.onreadystatechange=function()
-  	{
-  		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-  		{
-  			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-  		}
-  	}
-  	xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true);
-  	//xmlhttp.send();
-  }
-  */
-  </script>
+</script>
 </body>
 
 </html>
