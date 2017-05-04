@@ -12,17 +12,26 @@
 
 <body>
   <ul class="layui-nav" lay-filter="">
-    <li class="layui-nav-item layui-this"><a href="">JRT-discuss论坛</a></li>
+    <div class="layui-main">
+      <li class="layui-nav-item layui-this"><a href="">JRT-discuss论坛</a></li>
+    </div>
   </ul>
 
-<div id="discuss">
+<div id="discuss" class="layui-main">
+
   <div id="myDiv"></div>
   <ul id="myDiv">
     <li v-for="(item, index) in items">
-      {{ index }}
-      <!--{{ item.user }}-->
+      <fieldset class="layui-elem-field">
+        <legend>{{ item.updated_at }}</legend>
+        <div class="layui-field-box">
+          {{ item.body }}
+        </div>
+      </fieldset>
+      <!--{{ index }}
+      <!--{{ item.user }}
       {{ item.body }}
-      {{ item.updated_at }}
+      {{ item.updated_at }}-->
     </li>
   </ul>
 </div>
