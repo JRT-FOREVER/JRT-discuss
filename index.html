@@ -12,24 +12,25 @@
 
 <body>
   <ul class="layui-nav" lay-filter="">
-    <div class="layui-main">
       <li class="layui-nav-item layui-this"><a href="">JRT-discuss论坛</a></li>
-    </div>
   </ul>
 
   <hr/>
 
-<div id="discuss" class="layui-main">
+<div id="discuss">
   <blockquote class="layui-elem-quote">如果我有一天能见到JavaScript的开发者，我一定会fuckfuckfuckfuck T</blockquote>
 
   <div id="myDiv"></div>
   <ul id="myDiv">
     <li v-for="(item, index) in items">
       <fieldset class="layui-elem-field">
-        <legend><a v-bind:href="[ item.html_url ]" >{{ item.title }}</a>--{{ item.updated_at }}</legend>
+        <legend><a v-bind:href="[ item.html_url ]" >{{ item.title }}</a></legend>
         <div class="layui-field-box">
           {{ item.body }}
-          <div align="right" ><i class="layui-icon">&#xe611;</i>{{ item.comments }}</div>
+          <div align="right">
+            <div><i class="layui-icon">&#xe611;</i>{{ item.comments }}</div>
+            <div>{{ item.updated_at }}</div>
+          </div>
         </div>
       </fieldset>
       <!--{{ index }}
