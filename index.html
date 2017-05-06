@@ -17,15 +17,19 @@
     </div>
   </ul>
 
+  <hr/>
+
 <div id="discuss" class="layui-main">
+  <blockquote class="layui-elem-quote">如果我有一天能见到JavaScript的开发者，我一定会fuckfuckfuckfuck T</blockquote>
 
   <div id="myDiv"></div>
   <ul id="myDiv">
     <li v-for="(item, index) in items">
       <fieldset class="layui-elem-field">
-        <legend>{{ item.updated_at }}</legend>
+        <legend><a v-bind:href="[ item.html_url ]" >{{ item.title }}</a>--{{ item.updated_at }}</legend>
         <div class="layui-field-box">
           {{ item.body }}
+          <div align="right" >讨论：{{ item.comments }}</div>
         </div>
       </fieldset>
       <!--{{ index }}
@@ -34,6 +38,7 @@
       {{ item.updated_at }}-->
     </li>
   </ul>
+  <a class="layui-btn" href="/JRT-FOREVER/JRT-discuss/issues/new">新建帖子</a>
 </div>
 
 <script>
@@ -60,7 +65,8 @@ var app = new Vue({
            //this.parentMessage=items[0].body
          }
        }
-       xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true)
+       xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues",true)
+       //xmlhttp.open("GET","https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues/comments",true)
        xmlhttp.send()
        //this.items = xmlhttp.responseText
      }
