@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "axios": "^0.17.1",
+    "materialize-css": "^0.100.2",
+    "vue": "^2.5.9"
+  },
+  "name": "gitcuss",
+  "version": "1.0.0",
+  "description": "github issue api disscuss",
+  "main": "index.html",
+  "author": "YongXin Shi <shiyongxin@aliyun.com>",
+  "license": "MIT"
+}
