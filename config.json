@@ -1,0 +1,11 @@
+{
+  "api_url": "https://api.github.com/repos/JRT-FOREVER/JRT-discuss/issues",
+  "name": "JRT-FOREVER",
+  "repo": "JRT-discuss",
+  "menu": [
+    {"name": "Index", "href": "http://github.com/a-wing/gitcuss"},
+    {"name": "Author", "href": "http://a-wing.top"},
+    {"name": "Github", "href": "http://github.com/a-wing"}
+  ]
+}
+
