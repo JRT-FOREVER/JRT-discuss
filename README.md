@@ -23,3 +23,8 @@ JRT-discuss
 > <div align = right>3F</div>
 >
 >---
+>## 庆祝新的机器人功能上线
+>
+> <div align = right>4F</div>
+>
+>---
